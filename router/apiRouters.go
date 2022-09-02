@@ -27,5 +27,7 @@ func ApiRoutersInit(r *gin.Engine) {
 		r.GET("/article", initMiddleware, api.UserController{}.Article)
 
 		r.POST("/login", initMiddleware, admin.UserController{}.Login)
+
+		r.POST("/upload", api.UserController{}.Upload)
 	}
 }
