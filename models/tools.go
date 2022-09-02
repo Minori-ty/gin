@@ -1,4 +1,4 @@
-package moodels
+package models
 
 import "time"
 

@@ -2,7 +2,7 @@ package api
 
 import (
 	"fmt"
-	moodels "gin/models"
+	"gin/models"
 	"os"
 	"path"
 	"strconv"
@@ -56,7 +56,7 @@ func (con UserController) Upload(c *gin.Context) {
 		}
 
 		// 获取当前时间
-		day := moodels.GetDay()
+		day := models.GetDay()
 		dir := "./temp/" + day
 
 		// 创建文件目录
@@ -65,7 +65,7 @@ func (con UserController) Upload(c *gin.Context) {
 			fmt.Println("创建失败")
 			return
 		}
-		unix := moodels.GetUnix()
+		unix := models.GetUnix()
 
 		// 生成文件名称
 		fileName := strconv.FormatInt(unix, 10) + extName
