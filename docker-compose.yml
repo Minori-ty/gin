@@ -24,3 +24,15 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://root:root@mongo:27017/
     depends_on:
       - mongo
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    image: server
+    container_name: server
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongo

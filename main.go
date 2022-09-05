@@ -29,7 +29,7 @@ func init() {
 	mongoconn := options.Client().SetAuth(options.Credential{
 		Username: "root",
 		Password: "root",
-	}).ApplyURI("mongodb://127.0.0.1:27017")
+	}).ApplyURI("mongodb://mongo")
 	mongoclient, err = mongo.Connect(ctx, mongoconn)
 	if err != nil {
 		log.Fatal(err)
@@ -50,5 +50,5 @@ func main() {
 	defer mongoclient.Disconnect(ctx)
 	basepath := server.Group("/v1")
 	usercontroller.RegisterUserRoutes(basepath)
-	log.Fatal(server.Run(":9090"))
+	log.Fatal(server.Run(":8080"))
 }
