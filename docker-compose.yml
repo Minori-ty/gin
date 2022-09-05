@@ -3,7 +3,7 @@ version: '3.1'
 services:
   mongo:
     image: mongo
-    container_name: db
+    container_name: mongo
     restart: always
     ports:
       - 27017:27017
@@ -14,7 +14,7 @@ services:
 
   mongo-express:
     image: mongo-express
-    container_name: web
+    container_name: mongo_admin
     restart: always
     ports:
       - 8081:8081
