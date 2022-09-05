@@ -1,4 +1,4 @@
-// package models
+package models
 
 // import (
 // 	"fmt"
@@ -17,9 +17,3 @@
 // 		fmt.Println("连接mysql失败")
 // 	}
 // }
-
-package models
-
-func test() {
-
-}
